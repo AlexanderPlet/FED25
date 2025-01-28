@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resource/styles.css">
+    <script src="resource/main.js"></script>
+</head>
+<body>
+
+<!--===============================================================-->
+<!--========================== HEADER =============================-->
+<!--===============================================================-->
+<header>
+
+    <nav style="flex-wrap: wrap;">
+        <ul style="flex-wrap: wrap;">
+            <a href="index.html"><figure>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 40" focusable="false"
+                     style="border-radius: 2px;"><title>GAMMA</title>
+                    <path fill="#003978" d="M0 0h112v40H0z"></path>
+                    <path fill="#FFF"
+                          d="M103 27.9H89c-.68 0-1.25-.57-1.25-1.3v-7.98c0-.72.57-1.3 1.26-1.3h6.4v2.64h-3.8v5.3h6.35v-10.6H91.6V12h10.16c.7 0 1.26.6 1.26 1.32v14.6M82.7 12h-14c-.7 0-1.25.6-1.25 1.32v14.6h3.8V14.64h2.55v5.3h2.54v-5.3h2.54V27.9h5.08V13.33c0-.73-.56-1.32-1.26-1.32m-20.33 0h-14c-.68 0-1.25.6-1.25 1.35v14.6h3.8v-13.3h2.55v5.3H56v-5.3h2.54V27.9h5.08V13.33c0-.73-.57-1.32-1.27-1.32M43.3 27.9h-14c-.7 0-1.25-.57-1.25-1.3v-7.98c0-.72.56-1.3 1.26-1.3h6.4v2.64h-3.8v5.3h6.35v-10.6H31.9V12h10.16c.7 0 1.26.6 1.26 1.32v14.6M16.62 17.3v2.66h3.8v5.3H14.1v-10.6h10.17V12h-14c-.7 0-1.25.6-1.25 1.32V26.6c0 .73.56 1.3 1.26 1.3h13.98V17.3h-7.62"></path>
+                </svg>
+            </figure></a>
+            <li>
+                <a onclick="toggleDropdown()" id="assortiment" style="cursor: pointer">Assortiment &#9662;</a>
+            </li>
+
+            <li><a href="klusadvies.html">Klusadvies</a></li>
+            <li><a href="#">Klantenservice</a></li>
+            <li><a href="#">Actie</a></li>
+        </ul>
+
+        <form action="#" method="get">
+            <input type="text" id="search" name="search" placeholder="Zoeken naar...">
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.3 250.3" width="20" height="20"
+                     focusable="false" class="__web-inspector-hide-shortcut__">
+                    <path d="M244.2 214.6l-54.4-54.4-1-.7a103 103 0 1 0-29.4 29.4l.8 1 54.4 54.3a21 21 0 0 0 29.6-29.6zm-141.3-44.5a67.2 67.2 0 1 1 0-134.4 67.2 67.2 0 0 1 0 134.4z"
+                          fill="#fff" fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </form>
+
+        <ul>
+            <li>
+
+
+                <a href="#" style="
+                display: flex;
+                align-items: center;">
+                    <span style="font-size: 13px;"><strong>Inloggen</strong></span>
+
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                        <path
+                                d="M18.2742 19V17.3407C18.2742 16.4606 17.9246 15.6165 17.3022 14.9941C16.6799 14.3718 15.8358 14.0222 14.9557 14.0222H8.31855C7.43842 14.0222 6.59433 14.3718 5.97198 14.9941C5.34963 15.6165 5 16.4606 5 17.3407V19"
+
+                                stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                                d="M11.6372 11.6371C13.47 11.6371 14.9558 10.1513 14.9558 8.31855C14.9558 6.48577 13.47 5 11.6372 5C9.80443 5 8.31866 6.48577 8.31866 8.31855C8.31866 10.1513 9.80443 11.6371 11.6372 11.6371Z"
+
+                                stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                                d="M16.5 9C18.433 9 20 7.433 20 5.5C20 3.567 18.433 2 16.5 2C14.567 2 13 3.567 13 5.5C13 7.433 14.567 9 16.5 9Z"
+
+                                fill="#E55026" stroke="none">
+                        </path>
+                        <path d="M18 4L15 7" stroke="white"
+                              stroke-linecap="round"></path>
+                        <path d="M15 4L18 7"
+                              stroke="white"
+                              stroke-linecap="round"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         xmlns="http://www.w3.org/2000/svg" class="sc-dEFUya gdLUKN">
+                        <path d="M18.7663 6.2377C18.3753 5.84531 17.9111 5.53404 17.4002 5.32168C16.8893 5.10931 16.3417 5 15.7887 5C15.2357 5 14.6881 5.10931 14.1772 5.32168C13.6663 5.53404 13.2021 5.84531 12.8112 6.2377L11.9998 7.05166L11.1884 6.2377C10.3987 5.44548 9.32768 5.00041 8.21089 5.00041C7.09409 5.00041 6.02303 5.44548 5.23334 6.2377C4.44365 7.02993 4 8.10441 4 9.22479C4 10.3452 4.44365 11.4196 5.23334 12.2119L6.0447 13.0258L11.9998 19L17.9549 13.0258L18.7663 12.2119C19.1574 11.8197 19.4677 11.354 19.6794 10.8415C19.891 10.3289 20 9.77958 20 9.22479C20 8.67 19.891 8.12064 19.6794 7.60811C19.4677 7.09558 19.1574 6.6299 18.7663 6.2377V6.2377Z"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.87276 20.9999C10.3472 20.9999 10.7319 20.6162 10.7319 20.1428C10.7319 19.6694 10.3472 19.2856 9.87276 19.2856C9.3983 19.2856 9.01367 19.6694 9.01367 20.1428C9.01367 20.6162 9.3983 20.9999 9.87276 20.9999Z"
+                              fill="#003878" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M19.3227 20.9999C19.7972 20.9999 20.1818 20.6162 20.1818 20.1428C20.1818 19.6694 19.7972 19.2856 19.3227 19.2856C18.8483 19.2856 18.4636 19.6694 18.4636 20.1428C18.4636 20.6162 18.8483 20.9999 19.3227 20.9999Z"
+                              fill="#003878" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3 3H6.43636L8.73873 14.4771C8.81729 14.8718 9.03246 15.2262 9.34657 15.4785C9.66069 15.7308 10.0537 15.8648 10.4569 15.8571H18.8073C19.2104 15.8648 19.6035 15.7308 19.9176 15.4785C20.2317 15.2262 20.4469 14.8718 20.5255 14.4771L21.9 7.28571H7.29545"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a onclick="changeBackground()">
+                    🖌️
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+</header>
+
+
+<!--===============================================================-->
+<!--======================== CATEGORIES ===========================-->
+<!--===============================================================-->
+<section style="padding-bottom: 20px; ">
+
+    <section style="padding-bottom: 20px; padding-top: 20px; margin: 0 16%;">
+        <ul style="display: flex;align-items: start; padding: 0; margin: 0; flex-wrap: wrap;">
+            <li style="flex: none; padding: 0;">
+                <a href="index.html">
+                    <span itemprop="name">Home</span>
+                </a>
+            </li>
+            <li style="flex: none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+            </li>
+            <li>Klusadvies</li>
+        </ul>
+        <strong style="margin: 0 0 0 10px;display: block;">
+            <h2 style="color: black; text-align: left;">Klusadvies</h2>
+        </strong>
+    </section>
+
+    <section style="background-color: #F8F8F8; margin: 0 16%; padding: 20px 0 ">
+        <ul style="display: flex; margin: 10px; padding: 0; vertical-align: top; flex-wrap: wrap;">
+            <li style="margin: 0; padding: 0;">
+                <ul style="margin: 0; padding: 0; display:block;">
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Auto & Fiets</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Badkamer</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Behang</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Daken</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Deuren</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Elektra</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Gereedschap</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Hout</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Isolatie</a>
+                    </li>
+                </ul>
+            </li>
+            <li style=" margin: 0; padding: 0;">
+                <ul style="margin: 0; padding: 0; display:block;">
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Keuken</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Leidingen</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Meubels</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Plafonds</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Raamdecoratie</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Smart home</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Tegels</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Trappen</a>
+                    </li>
+                </ul>
+            </li>
+            <li style=" margin: 0; padding: 0;">
+                <ul style="margin: 0; padding: 0; display:block;">
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Toilet</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Tuin</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Veilig wonen</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Verf</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Verlichting</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Verwarming & ventilatie</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Vloeren</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: #003878; margin: 0;">Wanden</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</section>
+
+
+<!--===============================================================-->
+<!--======================== PHOTO GRID ===========================-->
+<!--===============================================================-->
+
+<section style="padding: 0 15%">
+    <ul style="display: flex; margin: 10px; padding: 0; vertical-align: top; flex-wrap: wrap;">
+        <li style="margin: 0; padding: 10px;">
+            <img
+                    src="https://images.ctfassets.net/7k5qhlbm8iou/D5uGgqKonRXFAUmfnYsvO/2698fe82ddb8b8389ae85503e813ce85/GNL_klusadvies_thumbs_1.jpeg?fm=webp"
+                    alt="Image 1"
+                    style="min-width: 200px;">
+        </li>
+        <li style="margin: 0; padding: 10px;">
+            <img
+                    src="https://images.ctfassets.net/7k5qhlbm8iou/OPjHPTf6Xz2SJlnmQ6Uub/6ce3c0354f3e570cf415b79f886b8826/GNL_klusadvies_thumbs_2.jpg?fm=webp"
+                    alt="Image 2"
+                    style="min-width: 200px;">
+        </li>
+        <li style="margin: 0; padding: 10px;">
+            <img
+                    src="https://images.ctfassets.net/7k5qhlbm8iou/XYu7cwXV8Eyj14WHTbiBu/d0bea2a67ae20ab842df362808a0d39d/GNL_klusadvies_thumbs_3.jpg?fm=webp"
+                    alt="Image 3"
+                    style="min-width: 200px;">
+        </li>
+    </ul>
+</section>
+<section style="padding: 0 15%">
+    <ul style="display: flex; margin: 10px; padding: 0; vertical-align: top; flex-wrap: wrap;">
+        <li style="margin: 0; padding: 10px;">
+            <img
+                    src="https://images.ctfassets.net/7k5qhlbm8iou/1NDMQyYyDQUvRfaIp6PkJg/4a17d6366d7af17cf9940d95ebca9dfe/GNL_klusadvies_thumbs_4.jpeg?fm=webp"
+                    alt="Image 1"
+                    style="min-width: 200px;">
+        </li>
+        <li style="margin: 0; padding: 10px;">
+            <img
+                    src="https://images.ctfassets.net/7k5qhlbm8iou/7mpfk8e1ufFLA9bo4zqU5v/e6be2cabbd15b26c31ffcd30628e8d67/GNL_klusadvies_thumbs_5.jpg?fm=webp"
+                    alt="Image 2"
+                    style="min-width: 200px;">
+        </li>
+        <li style="margin: 0; padding: 10px;">
+            <img
+                    src="https://images.ctfassets.net/7k5qhlbm8iou/1pNZsihINzVNzqjM3rvKAl/516167ecc3eee568379bcd1e773bfe4f/GNL_klusadvies_thumbs_6.jpg?fm=webp"
+                    alt="Image 3"
+                    style="min-width: 200px;">
+        </li>
+    </ul>
+</section>
+
+
+<!--===============================================================-->
+<!--======================== Assortiment ==========================-->
+<!--===============================================================-->
+<section>
+    <nav id="myDropdown" style="padding: 70px 0; overflow: scroll;">
+        <section style="background-color: white; border-radius: 16px; margin: 0 10%;" id="navBody">
+            <p style="font-size: 30px; display: block; float: right; align-self: end; width: 40px; margin: 0; padding: 14px 18px; cursor: pointer"
+               onclick="toggleDropdown()">×</p>
+            <section style="padding-bottom: 20px;">
+
+                <strong style="padding: 36px;display: flex;">
+                    <h4 style="color: black; text-align: left;">Assortiment</h4>
+                </strong>
+
+                <section style=" margin: 0 20px; padding: 0; ">
+                    <ul style="display: flex; margin: 10px; padding: 0; vertical-align: top; flex-wrap: wrap;">
+                        <li style=" margin: 0; min-width: 250px;padding: 0;">
+                            <ul style="margin: 0; padding: 0; display:block;">
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Auto & fiets</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Behang</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Bouwmaterialen</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Deuren, ramen & trappen</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Elektra</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Gereedschap</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style=" margin: 0; min-width: 250px;padding: 0;">
+                            <ul style="margin: 0; padding: 0; display:block;">
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Hobby & vrije tijd</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Hout</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">IJzerwaren</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Kerst</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Keuken & huishoudelijk</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Meubelen & accessoires</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style=" margin: 0; min-width: 250px;padding: 0;">
+                            <ul style="margin: 0; padding: 0; display:block;">
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Outlet</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Raamdecoratie</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Sanitair</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Smart home</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Tuin</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Veilig wonen</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style=" margin: 0; min-width: 250px;padding: 0;">
+                            <ul style="margin: 0; padding: 0; display:block;">
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Verf</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Verhuur</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Verlichting</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Verwarming & ventilatie</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Vloeren</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding: 0; margin: 0;">
+                                    <ul style="display: flex;align-items: center; padding: 0; margin: 0">
+                                        <li style="flex: none; padding: 0;">
+                                            <a href="#" style="color: #003878; margin: 0;">Zorgeloos wonen</a>
+                                        </li>
+                                        <li style="flex: none; padding: 0; margin: 0;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+
+        </section>
+    </nav>
+</section>
+
+
+<!--===============================================================-->
+<!--========================== FOOTER =============================-->
+<!--===============================================================-->
+<footer>
+    <section style="background-color: #f2f5fa; padding: 0 7%; flex-wrap: wrap;">
+        <ul style="margin: 0; padding: 0;flex-wrap: wrap;">
+            <li>
+
+                <img src="https://gamma.nl/FE/e6bb8d7/images/gamma_nl/icons/svg/tools.svg" alt="klusadvies icon"
+                     style="width: 25px; margin-right: 8px;">
+                <ul style="display: block;">
+                    <li>
+                        <h4 style="color: #003878">IK KAN HET</h4><br/>
+                    </li>
+                    <li>
+                        <span style="color: #003878">Bekijk onze handige <a href="https://www.gamma.nl/klusadvies">klusadviezen</a></span>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img src="https://gamma.nl/FE/e6bb8d7/images/gamma_nl/icons/svg/job.svg" alt="difm icon"
+                     style="width: 25px; margin-right: 8px;">
+
+                <ul style="display: block">
+                    <li>
+                        <h4 style="color: #003878">HULP NODIG BIJ JE KLUS?</h4>
+                    </li>
+                    <li>
+                    <span style="color: #003878">Laat jouw klus uitvoeren door een klusexpert met de <a
+                            href="https://www.gamma.nl/klusservice">GAMMA Klusservice</a></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section style="background-color: #003878;flex-wrap: wrap;">
+        <section style="padding: 10px 7% 0;">
+
+            <ul style="display: flex; margin: 20px 0; padding: 0; flex-wrap: wrap;">
+                <li style="flex: 0; margin: 0; padding: 0;">
+
+                    <img src="https://www.gamma.nl/FE/e6bb8d7/images/gamma_nl/icons/svg/customer-service.svg"
+                         alt="customer service icon"
+                         style="width: 25px; margin-right: 8px;">
+                </li>
+                <li style=" margin: 0; padding: 0;">
+                    <strong><h3 style="color: #fff; margin: 0;">KLANTENSERVICE</h3></strong>
+                </li>
+            </ul>
+            <p style="color: #fff; padding-bottom: 70px; padding-left: 0; margin: 0">Op de <a style="color: white;"
+                                                                                              href="https://www.gamma.nl/klantenservice">klantenservicepagina</a>
+                vind je makkelijk antwoorden. Zoals informatie over bezorgen, retourneren en de status van je bestelling
+            </p>
+
+        </section>
+        <section style="padding-bottom: 20px;">
+
+            <ul style="display: flex; margin: 0 7%; padding: 0; vertical-align: top; flex-wrap: wrap;">
+                <li style="margin: 0; padding: 0;">
+                    <ul style="margin: 0; padding: 0; display:block;">
+                        <li>
+                            <strong><h4 style="color: #fff; margin: 0;">ASSORTIMENT</h4></strong>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Gereedschap</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Verf</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Vloeren</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Tuin</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Alle merken</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Bekijk het assortiment</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style=" margin: 0; padding: 0;">
+                    <ul style="margin: 0; padding: 0; display:block;">
+                        <li>
+                            <strong><h4 style="color: #fff; margin: 0;">KLUSADVIES</h4></strong>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Verven</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Isoleren</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Tuin aanleg en
+                                onderhoud</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Vloer leggen</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Wanden</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Bekijk alle
+                                klusadviezen</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style=" margin: 0; padding: 0;">
+                    <ul style="margin: 0; padding: 0; display:block;">
+                        <li>
+                            <strong><h4 style="color: #fff; margin: 0;">SERVICES</h4></strong>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Gereedschap huren</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Klusservice</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Bezorgen</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Verhuisservice</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">PostNL Pakketpunt</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Bekijk alle services</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style=" margin: 0; padding: 0;">
+                    <ul style="margin: 0; padding: 0; display:block;">
+                        <li>
+                            <strong><h4 style="color: #fff; margin: 0;">GAMMA</h4></strong>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Bouwmarkten</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Over GAMMA</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Vacatures</a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none;color: #fff; margin: 0;">Nieuwsbrief</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </section>
+        <section style="background-color: white; padding: 10px 5%">
+            <ul style="margin: 0; padding: 0; display:flex; flex-wrap: wrap;">
+                <figure>
+                    <img style="width: 70px;" data-src="/FE/6a8aeb3/images/gamma_nl/logos/logo.svg"
+                         class="ftr-copy-logo lazyloaded" alt="footer GAMMA"
+                         src="https://gamma.nl/FE/6a8aeb3/images/gamma_nl/logos/logo.svg">
+                </figure>
+                <li>
+                    <a style="text-decoration: none; margin: 0;">© 2024 Intergamma B.V.</a>
+                </li>
+                <li>
+                    <a href="#" style="text-decoration: none; margin: 0;">Voorwaarden en veiligheid</a>
+                </li>
+                <li>
+                    <a href="#" style="text-decoration: none; margin: 0;">Prijsinformatie</a>
+                </li>
+                <li style="flex: none">
+                    <img style="width: 90px;"
+                         src="https://images.ctfassets.net/7k5qhlbm8iou/uWGHDlCGprOnKuAP1d5qj/1f5775fd6aa87935e8d6cb410afe60cd/thuiswinkelwaarborg_footericon.png"></img>
+                </li>
+                <li style="width: 20px; flex: none">
+                    <a href="https://www.facebook.com/gamma.nl" target="_blank" rel="nofollow">
+                        <img src="https://images.ctfassets.net/7k5qhlbm8iou/5w2i7aTYSw8uunS039tsdy/45172a38601c94756d0aca5ba269c843/thumb_facebook.png"
+                             data-src="https://images.ctfassets.net/7k5qhlbm8iou/5w2i7aTYSw8uunS039tsdy/45172a38601c94756d0aca5ba269c843/thumb_facebook.png"
+                             border="0" alt="facebook" class=" lazyloaded">
+                    </a>
+                </li>
+                <li style="width: 20px; flex: none">
+                    <a href="https://www.instagram.com/gamma_nl" target="_blank" rel="nofollow">
+                        <img src="https://images.ctfassets.net/7k5qhlbm8iou/3rIaSLttncoAsc8nsRHrXh/f0e9d2303d01f63f16f920b236497f98/thumb_instagram.png"
+                             data-src="https://images.ctfassets.net/7k5qhlbm8iou/3rIaSLttncoAsc8nsRHrXh/f0e9d2303d01f63f16f920b236497f98/thumb_instagram.png"
+                             border="0" alt="instagram" class=" lazyloaded">
+                    </a>
+                </li>
+                <li style="width: 20px; flex: none">
+                    <a href="https://nl.pinterest.com/GAMMA_NL" target="_blank" rel="nofollow">
+                        <img src="https://images.ctfassets.net/7k5qhlbm8iou/6TTDLMzzrPNNsSJTwRYudh/db99f4ab59e4fd47a488448bea716d09/thumb_pinterest.png"
+                             data-src="https://images.ctfassets.net/7k5qhlbm8iou/6TTDLMzzrPNNsSJTwRYudh/db99f4ab59e4fd47a488448bea716d09/thumb_pinterest.png"
+                             border="0" alt="Pinterest" class=" lazyloaded"></a>
+                </li>
+                <li style="width: 20px; flex: none">
+                    <a href="https://twitter.com/gammanl" target="_blank" rel="nofollow">
+                        <img src="https://images.ctfassets.net/7k5qhlbm8iou/6xVyBm4e0pFGr2pigfoPnB/96177b996bdb4f27646337c6b771738d/thumb_twitter.png"
+                             data-src="https://images.ctfassets.net/7k5qhlbm8iou/6xVyBm4e0pFGr2pigfoPnB/96177b996bdb4f27646337c6b771738d/thumb_twitter.png"
+                             border="0" alt="twitter" class=" lazyloaded"></a>
+                </li>
+                <li style="width: 20px; flex: none">
+                    <a href="https://www.youtube.com/user/gammabouwmarkt" target="_blank">
+                        <img src="https://images.ctfassets.net/7k5qhlbm8iou/uB7YYj9GfgCYEZRQ11WTZ/708c41ecd8d370e8841ac4b40d0c0c1b/thumb_youtube.png"
+                             data-src="https://images.ctfassets.net/7k5qhlbm8iou/uB7YYj9GfgCYEZRQ11WTZ/708c41ecd8d370e8841ac4b40d0c0c1b/thumb_youtube.png"
+                             border="0" alt="Youtube" class=" lazyloaded"></a>
+                </li>
+            </ul>
+        </section>
+    </section>
+</footer>
+
+</body>
+</html>
