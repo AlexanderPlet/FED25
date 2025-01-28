@@ -53,7 +53,7 @@ header nav ul:nth-of-type(3) li img{
     height: 30px;
     min-width: 30px;
     min-height: 30px;
-    gap: 0.0625em;
+    gap: 15em;
     display: inline-flex;
     
 }
@@ -193,13 +193,6 @@ nav button:nth-of-type(1) {
 
 }
 
-picture {
-    display: block;
-    width: calc(100% - 8%);
-    margin: 1.875em 4%;
-    padding: 0;
-    transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
-}
 
 img {
     width: 100%;
@@ -457,52 +450,29 @@ section article:nth-of-type(3) img{
 section article:nth-of-type(3) img:hover{
     transform: scaleX(-1);
 }
+
+section:nth-of-type(3) article{
+    justify-content: space-evenly;
+    gap: 1em;
+    width: 100%;
+    margin-left: -5.5em;
+}
+
 section:nth-of-type(3) article ul{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-section:nth-of-type(3) article:nth-of-type(2) ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-section:nth-of-type(3) article:nth-of-type(3) ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    
-}
 
 /*main images*/
 section:nth-of-type(3) ul li img {
-    width: 5em;
-    height: 5em;
-    margin-left: 9em;
-    
-}
-/* wishes*/
-section:nth-of-type(3) article:nth-of-type(2) ul li img {
-    width: 2em;
-    height: 2em;
-    margin-right: 7em;
-    margin-top: -12em;
-    
+    width: 25em;
+    height: 20em;
+    margin-left: 9.2em;
+     
 }
 
-/*content*/
-section:nth-of-type(3) article:nth-of-type(3) ul li img {
-    width: 14em;
-    height: 8em;
-    margin-right: 0.05em;
-    margin-left: -0.0625em;
-    margin-bottom: 4em;
-    margin-top: -6em;
-    padding: 0;
-    
-}
 
 
 section:nth-of-type(3) article:nth-of-type(2) ul {
