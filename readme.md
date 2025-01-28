@@ -228,7 +228,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Alles wat te maken heeft gehad met het niet gebruiken van divs, IDS en classes door onder andere nth te gebruiken
+  <img src="resource/images/progressie4.png" width="375px" alt="progressie">!
 </details>
 
 
