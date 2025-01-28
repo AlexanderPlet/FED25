@@ -1,0 +1,768 @@
+:root {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #FFFFFF;
+    text-align: start;
+}
+
+/* Header */
+
+header {
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.2);
+    width: 100%;
+    
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    width: 85%;
+    margin-left: 5.5em;
+    margin-right: 5.5em;
+    position: relative;
+}
+
+header nav ul:nth-child(1){
+    display: flex;
+    justify-content: flex-end;
+    /*width: calc(66.66% - 10px); /* 2/3 of the width with some spacing */
+    margin-bottom: 0.6250em;
+    margin-top: 0.6250em;
+    width: 100%;
+
+}
+
+header nav li:hover{
+    text-decoration: underline;
+} 
+
+header nav ul li:nth-of-type(1){
+    width: 120px;
+    height: 35px;
+    min-width: 120px;
+    min-height: 35px;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    bottom: 0;
+}
+
+header nav ul:nth-of-type(3) li img{
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    gap: 0.0625em;
+    display: inline-flex;
+    
+}
+
+header nav ul:nth-of-type(3) li:first-of-type{
+   margin-right: -0.625em;
+   margin-left:  1em;   
+}
+
+header nav ul:nth-of-type(3) li a :nth-of-type(1){
+   margin-right: -0.625em;
+   margin-left:  1em;   
+   margin-top: 0.0625em;
+}
+
+header nav ul:nth-of-type(3) li a img:hover{
+    background: url(images/wish_added.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    z-index: 99;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+
+header nav ul:nth-child(2) li a{
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+/*main body navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625em;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    align-items: center;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1.25em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 56, 120);
+}
+
+/*search bar form*/
+
+form {
+    border: 0.0625em solid #ddd;
+    border-radius: 9.375em;
+    display: flex;
+    text-align: center;
+}
+
+form img{
+    width: 20px;
+    height: 20px;
+}
+
+form input {
+    margin: 0.75em 0.75em 0.75em 0.625em;
+    border: none !important; /* no border and override any inline styles*/
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+input:focus {
+    outline: none !important;
+    
+}
+
+form button {
+    background-color: rgb(0, 56, 120);
+    border-radius: 9.375em;
+    padding: 0.5em 0.75em;
+    margin: 0.125em;
+    cursor: pointer;
+}
+/*section first article buttons*/
+button {
+    border: none;
+    color: rgb(0, 56, 120);
+    padding: 0.625em;
+    cursor: pointer;
+}
+
+/* General styling for the button */
+nav button:nth-of-type(1) {
+    background: none;
+    border: none;
+    color: #005baa;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Add hover effect */
+nav button:nth-of-type(1):hover {
+    text-decoration: underline;
+}
+
+/* Expanded state styling (optional) */
+nav button:nth-of-type(1) {
+    font-weight: bold; /* Example: Highlight when expanded */
+}
+
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 0.0625em;
+
+}
+
+picture {
+    display: block;
+    width: calc(100% - 8%);
+    margin: 1.875em 4%;
+    padding: 0;
+    transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+}
+
+picture:hover {
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.2); /* Adjust the shadow as needed */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1  {
+    visibility: hidden;
+    display: none;
+    z-index: -9999;
+}
+
+h2 {
+    color: gray;
+    text-align: left;
+    margin-top: 0.625em;
+    margin-left: 2.625em;
+}
+
+li button {
+    margin: 0.625em 0.625em;
+    border-radius: 0.3125em;
+    height: 3.125em;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+}
+
+li a span{
+    font-size: 0.8125em;
+}
+
+table {
+    margin: 0 10%;
+    background-color: #23b3d5;
+    border: 0.625em solid #23b3d5;
+}
+
+p {
+    padding: 0 10%;
+}
+
+a {
+    color: rgb(0, 56, 120);
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+/*all section stuff*/
+
+section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space evenly between columns */
+    gap: 2px; /* Add spacing between columns */
+    padding: 10px;
+    /*background-color: #f9f9f9;  Optional background color */
+    width: 90%;
+}
+
+section:nth-of-type(1) {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-evenly; /* Distribute space evenly between columns */
+    gap: 0.0625em; /* Add spacing between columns */
+    padding: 20px;
+    /*background-color: #f9f9f9;  Optional background color */
+    width: 90%;
+}
+
+/* Style each column (article) */
+section > article {
+    flex: 1; /* Each column takes up equal width */
+    margin: 0;
+    text-align: start; /* start the content inside each column */
+    background-color: #ffffff; /* Optional background for the columns */
+    /*border: 1px solid #ddd;  Optional border for visual separation */
+    /*border-radius: 8px;  Optional rounded corners */
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Optional shadow for depth */
+    
+}
+
+section article:nth-of-type(1) {
+    margin-left: 1.225em;
+    width: 2em;
+    text-align: left;
+    
+}
+
+section article:nth-of-type(1) li:nth-of-type(1) h3 {
+      position:absolute;
+      left:0;
+      bottom:0;
+}
+section article:nth-of-type(1) ul li a{
+    text-align: left;
+    margin-left: 3.2em;
+    list-style-type: none;
+    
+}
+
+section article:nth-of-type(1) ul li:nth-of-type(1) button{
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+section article ul{
+    list-style-type: none;
+}
+
+section article ul li:nth-of-type(9) button{
+    background-color: #00008B;
+    margin-bottom: -3.1em;
+    margin-left: 3.2em;
+}
+
+section article ul li:nth-of-type(9) button:hover{
+    background-color: rgb(59, 59, 169);
+}
+
+section article ul li:nth-of-type(10) button{
+    margin-left: 3.2em;
+    background-color: #FF8C00;
+}
+section article button{
+    width: 20em;
+    margin-left: 0.5em;
+    margin-top: 3.3em;
+    margin-bottom: 0.1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+
+section article img{
+    border-radius: 8px;  /*Optional rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /*Optional shadow for depth */
+    object-fit: fill;
+    
+}
+
+section article:nth-of-type(2) button{
+    background-color: #00008B;
+    margin-bottom: 3.1em;
+    margin-left: 22em;
+    margin-top: -5em;
+    width: 14em;
+    height: 2em;
+}
+
+section article:nth-of-type(2) img{
+    width: 38em;
+    height:34em;
+    text-align: left;
+}
+
+section:nth-of-type(2) article{
+    /**/
+    margin-left: 5em; 
+    margin-right: -1em;
+    
+}
+
+section:nth-of-type(2) article h2{
+    /**/
+    margin-left: 0.625em;
+    text-transform: uppercase;
+    
+}
+
+section:nth-of-type(2) article h3{
+    display: table; /* keep the background color wrapped tight */
+    position: absolute;
+    margin-bottom: -4.6em;
+    margin-left: 9em;
+    padding:5px;
+    font-size:20px;
+    background-color:gray;
+    color:#ffffff;
+    
+}
+section article img:hover{
+    transform: scale(1.03);
+}
+
+section article:nth-of-type(3) img{
+    width: 23em;
+    height:15em;
+}
+
+section:nth-of-type(3) article ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+section:nth-of-type(3) article:nth-of-type(2) ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+section:nth-of-type(3) article:nth-of-type(3) ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+/*main images*/
+section:nth-of-type(3) ul li img {
+    width: 5em;
+    height: 5em;
+    margin-left: 9em;
+    
+}
+/* wishes*/
+section:nth-of-type(3) article:nth-of-type(2) ul li img {
+    width: 2em;
+    height: 2em;
+    margin-right: 7em;
+    margin-top: -12em;
+    
+}
+
+/*content*/
+section:nth-of-type(3) article:nth-of-type(3) ul li img {
+    width: 14em;
+    height: 8em;
+    margin-right: 0.05em;
+    margin-left: -0.0625em;
+    margin-bottom: 4em;
+    margin-top: -6em;
+    padding: 0;
+    
+}
+
+
+section:nth-of-type(3) article:nth-of-type(2) ul {
+    margin-right: 0.0625em;
+    margin-left: 5.2em;
+}
+
+section:nth-of-type(3) article:nth-of-type(3) ul {
+    margin-right: 0.0625em;
+    margin-left: 5.2em;
+}
+
+section:nth-of-type(3) article:nth-of-type(2) ul {
+    margin-right: 0.0625em;
+    margin-left: 5.2em;
+}
+
+section:nth-of-type(3) article:nth-of-type(3) ul {
+    margin-right: 0.0625em;
+    margin-left: 5.2em;
+}
+
+section:nth-of-type(4) article:nth-of-type(1) ul:nth-of-type(1) {
+    margin-left: 4em;
+}
+
+section:nth-of-type(4) article:nth-of-type(1) ul li:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* Style each column (article) */
+section:nth-of-type(5) > article {
+    flex: 3; /* Each column takes up equal width */
+    margin: 0;
+    text-align: start; /* start the content inside each column */
+    background-color: #ffffff; /* Optional background for the columns */
+    /*border: 1px solid #ddd;  Optional border for visual separation */
+    /*border-radius: 8px;  Optional rounded corners */
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Optional shadow for depth */
+    
+}
+
+
+
+section article h3 {
+  position:absolute;
+  /*left:1rem;
+  right:20rem;*/
+  bottom:-5.0rem;
+  font-size: 2em;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+
+section:nth-of-type(1) ul{
+    flex-direction: column;
+}
+
+section:nth-of-type(2){
+    text-align: center;
+}
+
+section:nth-of-type(3){
+    flex-wrap: wrap;
+}
+
+
+/*
+section:nth-of-type(3) button:nth-child(2){
+    color: white; 
+    background-color: orange;
+}
+*/
+section ul {
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: left;
+    margin-left: 0.125em;
+    padding: 0;
+    display: flex;
+}
+
+section ul li {
+    margin: 0.625em 0.625em;
+    flex: 1;
+    list-style-type: none;
+}
+
+section li {
+    list-style: none;
+    margin-right: 1.25em;
+    display: flex;
+    align-items: left;
+}
+
+hr {
+    margin: 1.875em 10%;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+section nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Footer Section */
+footer section {
+  flex-wrap: wrap;
+  justify-content: space-between;
+/* Distribute space evenly between columns */
+  gap: 5em; /* Add spacing between columns */
+  padding: 1em;
+  width: 100%;
+    
+}
+
+footer section:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: #f2f5fa;
+    color: #003878;
+    
+}
+
+footer section:nth-of-type(1) ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    left: 0;
+    
+}
+
+footer section:nth-of-type(1) ul li ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+footer section:nth-of-type(1) ul li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+footer section:first-of-type {
+  display: flex;
+  background-color: #f2f5fa;
+  padding: 0 7%;
+  flex-direction: row;
+  left: 10px;
+}
+
+footer section:last-of-type {
+  background-color: #003878;
+}
+
+footer section:last-of-type > section {
+  padding: 10px 7%;
+}
+
+footer section:last-of-type > section:nth-child(2) {
+  padding-left: 1em;
+  padding-right: 1em;    
+  padding-bottom: 1em;
+  justify-content: center;
+  gap: 1em;
+}
+
+footer section:last-of-type > section:last-of-type {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 10px 5%;
+}
+
+/* First Section List */
+footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+footer ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* List Inside Cards */
+footer ul ul {
+  display: block;
+}
+
+footer ul ul li h4 {
+  color: #003878;
+}
+
+footer ul ul li span {
+  color: #003878;
+}
+
+/* Links */
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer ul ul li a {
+  color: #003878;
+}
+
+footer ul ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+footer img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+footer section img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Last Section Styles */
+footer section:last-of-type ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 7%;
+  padding: 0;
+}
+
+footer section:last-of-type ul li ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+footer section:last-of-type ul li ul li h4 {
+  color: #fff;
+  margin: 0;
+}
+
+footer section:last-of-type ul li ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer section:last-of-type ul li ul li a:hover {
+  text-decoration: underline;
+}
+
+footer ul:last-child {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+footer ul:last-child li a {
+  text-decoration: none;
+  margin: 0;
+}
+
+footer ul:last-child li img {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* microinteractie */
+#myDropdown {
+    padding: 70px 0; 
+    overflow: scroll;
+}
+
+#myDropdown section{
+    background-color: white; 
+    border-radius: 1em; 
+    margin: 0 10%;
+}
